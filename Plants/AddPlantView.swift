@@ -45,6 +45,7 @@ struct AddPlantView: View {
                         plant.waterFrequency = frequency
                     }
                     plant.notes = self.notes
+                    plant.createdAt = Date()
 
                     try? self.moc.save()
                     self.presentationMode.wrappedValue.dismiss()
