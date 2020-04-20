@@ -10,22 +10,26 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Plant.entity(), sortDescriptors: []) var plants: FetchedResults<Plant>
-
+    //    @FetchRequest(entity: Plant.entity(), sortDescriptors: []) var plants: FetchedResults<Plant>
+    
+    @ObservedObject var viewModel = PlantViewModel()
+    
     @State private var showingAddScreen = false
     
     var body: some View {
         NavigationView {
-            Text("Count: \(plants.count)")
-                .navigationBarTitle("My Plants")
-                .navigationBarItems(trailing: Button(action: {
-                    self.showingAddScreen.toggle()
-                }) {
-                    Image(systemName: "plus")
-                })
+            CollectionView(model: viewModel) { plant in
+                Text(plant.name ?? "Unnamed")
+            }
+            .navigationBarTitle("My Plants")
+            .navigationBarItems(trailing: Button(action: {
+                self.showingAddScreen.toggle()
+            }) {
+                Image(systemName: "plus")
+            })
                 .sheet(isPresented: $showingAddScreen) {
                     AddPlantView().environment(\.managedObjectContext, self.moc)
-                }
+            }
         }
     }
 }
