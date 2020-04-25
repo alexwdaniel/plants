@@ -27,14 +27,14 @@ struct CollectionView<Content: View>: View {
     @State var width = 2
     @State var spacing: CGFloat = 5
     
-    @ObservedObject var model: PlantViewModel
+    @Binding var items: [Plant];
     let content: (Plant) -> Content
 
     var body: some View {
         GeometryReader { proxy in
             ScrollView {
                 VStack(alignment: .leading) {
-                    ForEach(self.model.objects.chunk(size: self.width), id: \.self) { row in
+                    ForEach(self.items.chunk(size: self.width), id: \.self) { row in
                         HStack(alignment: .center, spacing: self.spacing) {
                             ForEach(row, id: \.self) { item in
                                 self.content(item)

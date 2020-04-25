@@ -14,7 +14,6 @@ class ImageSaver: NSObject {
             let uuid = UUID()
             let name = "\(uuid).png"
             let filename = self.getDocumentsDirectory().appendingPathComponent(name)
-            print(filename)
             try? data.write(to: filename)
             return name
         }
@@ -22,7 +21,7 @@ class ImageSaver: NSObject {
     }
     
     @objc func saveError(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-        
+        // handle error
     }
     
     private func getDocumentsDirectory() -> URL {
@@ -36,9 +35,7 @@ class ImageSaver: NSObject {
         if fileManager.fileExists(atPath: imagePath.path) {
             let image = UIImage(contentsOfFile: imagePath.path)
             return image
-        } else{
-            print("No Image")
-            return nil
         }
+        return nil
     }
 }

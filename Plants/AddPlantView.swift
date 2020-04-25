@@ -81,7 +81,6 @@ struct AddPlantView: View {
                             }
                             
                         }
-                        print(plant)
                         try? self.moc.save()
                         self.presentationMode.wrappedValue.dismiss()
                     }.buttonStyle(CustomButtonStyle())

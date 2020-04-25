@@ -10,16 +10,13 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
-    //    @FetchRequest(entity: Plant.entity(), sortDescriptors: []) var plants: FetchedResults<Plant>
-    
     @ObservedObject var viewModel = PlantViewModel()
-    
     @State private var showingAddScreen = false
     
     var body: some View {
         NavigationView {
-            CollectionView(model: viewModel) { plant in
-                Text(plant.name ?? "Unnamed")
+            CollectionView(items: $viewModel.items) { plant in
+                PlantView(plant: plant).padding()
             }
             .navigationBarTitle("My Plants")
             .navigationBarItems(trailing: Button(action: {

@@ -20,6 +20,9 @@
 		FAB65043244CD14400E1AFEE /* CaptureImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB65042244CD14400E1AFEE /* CaptureImageView.swift */; };
 		FAB65045244D193E00E1AFEE /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB65044244D193E00E1AFEE /* CollectionView.swift */; };
 		FAB65047244D1FD200E1AFEE /* PlantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB65046244D1FD200E1AFEE /* PlantViewModel.swift */; };
+		FAB6504E244D36E300E1AFEE /* Plant+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6504C244D36E300E1AFEE /* Plant+CoreDataClass.swift */; };
+		FAB6504F244D36E300E1AFEE /* Plant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6504D244D36E300E1AFEE /* Plant+CoreDataProperties.swift */; };
+		FAC6B4FB2453432E009409C1 /* PlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6B4FA2453432E009409C1 /* PlantView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		FAB65042244CD14400E1AFEE /* CaptureImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureImageView.swift; sourceTree = "<group>"; };
 		FAB65044244D193E00E1AFEE /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		FAB65046244D1FD200E1AFEE /* PlantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantViewModel.swift; sourceTree = "<group>"; };
+		FAB6504C244D36E300E1AFEE /* Plant+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plant+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FAB6504D244D36E300E1AFEE /* Plant+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plant+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FAC6B4FA2453432E009409C1 /* PlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,10 +76,13 @@
 		FA3F56B8244CBCD000C9D4FC /* Plants */ = {
 			isa = PBXGroup;
 			children = (
+				FAB6504C244D36E300E1AFEE /* Plant+CoreDataClass.swift */,
+				FAB6504D244D36E300E1AFEE /* Plant+CoreDataProperties.swift */,
 				FA3F56B9244CBCD000C9D4FC /* AppDelegate.swift */,
 				FA3F56BB244CBCD000C9D4FC /* SceneDelegate.swift */,
 				FA3F56C0244CBCD000C9D4FC /* ContentView.swift */,
 				FAB65044244D193E00E1AFEE /* CollectionView.swift */,
+				FAC6B4FA2453432E009409C1 /* PlantView.swift */,
 				FAB6503C244CC4DC00E1AFEE /* AddPlantView.swift */,
 				FAB65042244CD14400E1AFEE /* CaptureImageView.swift */,
 				FAB65046244D1FD200E1AFEE /* PlantViewModel.swift */,
@@ -170,10 +179,13 @@
 				FAB65045244D193E00E1AFEE /* CollectionView.swift in Sources */,
 				FA3F56BA244CBCD000C9D4FC /* AppDelegate.swift in Sources */,
 				FA3F56BF244CBCD000C9D4FC /* Plants.xcdatamodeld in Sources */,
+				FAB6504F244D36E300E1AFEE /* Plant+CoreDataProperties.swift in Sources */,
 				FAB6503F244CCF8200E1AFEE /* Coordinator.swift in Sources */,
 				FAB65043244CD14400E1AFEE /* CaptureImageView.swift in Sources */,
 				FAB65041244CCFB600E1AFEE /* ImageSaver.swift in Sources */,
+				FAB6504E244D36E300E1AFEE /* Plant+CoreDataClass.swift in Sources */,
 				FA3F56C1244CBCD000C9D4FC /* ContentView.swift in Sources */,
+				FAC6B4FB2453432E009409C1 /* PlantView.swift in Sources */,
 				FA3F56BC244CBCD000C9D4FC /* SceneDelegate.swift in Sources */,
 				FAB65047244D1FD200E1AFEE /* PlantViewModel.swift in Sources */,
 				FAB6503D244CC4DC00E1AFEE /* AddPlantView.swift in Sources */,
