@@ -23,6 +23,7 @@
 		FAB6504E244D36E300E1AFEE /* Plant+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6504C244D36E300E1AFEE /* Plant+CoreDataClass.swift */; };
 		FAB6504F244D36E300E1AFEE /* Plant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6504D244D36E300E1AFEE /* Plant+CoreDataProperties.swift */; };
 		FAC6B4FB2453432E009409C1 /* PlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6B4FA2453432E009409C1 /* PlantView.swift */; };
+		FAC6B4FD2454E458009409C1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6B4FC2454E458009409C1 /* Notifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		FAB6504C244D36E300E1AFEE /* Plant+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plant+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FAB6504D244D36E300E1AFEE /* Plant+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plant+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FAC6B4FA2453432E009409C1 /* PlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantView.swift; sourceTree = "<group>"; };
+		FAC6B4FC2454E458009409C1 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				FAB65046244D1FD200E1AFEE /* PlantViewModel.swift */,
 				FAB6503E244CCF8200E1AFEE /* Coordinator.swift */,
 				FAB65040244CCFB600E1AFEE /* ImageSaver.swift */,
+				FAC6B4FC2454E458009409C1 /* Notifications.swift */,
 				FA3F56C2244CBCD500C9D4FC /* Assets.xcassets */,
 				FA3F56C7244CBCD500C9D4FC /* LaunchScreen.storyboard */,
 				FA3F56CA244CBCD500C9D4FC /* Info.plist */,
@@ -184,6 +187,7 @@
 				FAB65043244CD14400E1AFEE /* CaptureImageView.swift in Sources */,
 				FAB65041244CCFB600E1AFEE /* ImageSaver.swift in Sources */,
 				FAB6504E244D36E300E1AFEE /* Plant+CoreDataClass.swift in Sources */,
+				FAC6B4FD2454E458009409C1 /* Notifications.swift in Sources */,
 				FA3F56C1244CBCD000C9D4FC /* ContentView.swift in Sources */,
 				FAC6B4FB2453432E009409C1 /* PlantView.swift in Sources */,
 				FA3F56BC244CBCD000C9D4FC /* SceneDelegate.swift in Sources */,
