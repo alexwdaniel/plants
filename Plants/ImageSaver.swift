@@ -10,14 +10,15 @@ import UIKit
 
 class ImageSaver: NSObject {
     func save(image: UIImage) -> String? {
-        if let data = image.pngData() {
-            let uuid = UUID()
-            let name = "\(uuid).png"
-            let filename = self.getDocumentsDirectory().appendingPathComponent(name)
-            try? data.write(to: filename)
-            return name
+        guard let normalized = self.fixOrientation(image: image), let data = normalized.pngData() else {
+            return nil
         }
-        return nil
+        
+        let uuid = UUID()
+        let name = "\(uuid).png"
+        let filename = self.getDocumentsDirectory().appendingPathComponent(name)
+        try? data.write(to: filename)
+        return name        
     }
     
     @objc func saveError(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
@@ -37,5 +38,17 @@ class ImageSaver: NSObject {
             return image
         }
         return nil
+    }
+    
+    func fixOrientation(image: UIImage) -> UIImage? {
+        if image.imageOrientation == UIImage.Orientation.up {
+            return image
+        }
+
+        UIGraphicsBeginImageContext(image.size)
+        image.draw(in: CGRect(origin: .zero, size: image.size))
+        let normalizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return normalizedImage
     }
 }

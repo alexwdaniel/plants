@@ -25,14 +25,15 @@ extension Array: Identifiable where Element: Identifiable {
 
 struct CollectionView<Content: View>: View {
     @State var width = 2
-    @State var spacing: CGFloat = 5
+    @State var spacing: CGFloat = 0
+    let contentRatio: CGFloat = 3 / 2
     
     @Binding var items: [Plant];
     let content: (Plant) -> Content
 
     var body: some View {
         GeometryReader { proxy in
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading) {
                     ForEach(self.items.chunk(size: self.width), id: \.self) { row in
                         HStack(alignment: .center, spacing: self.spacing) {
@@ -40,13 +41,12 @@ struct CollectionView<Content: View>: View {
                                 self.content(item)
                                     .frame(
                                         width: proxy.frame(in: .local).width / CGFloat(self.width) - self.spacing,
-                                        height: proxy.frame(in: .local).width / CGFloat(self.width) - self.spacing
-                                    )
+                                        height: proxy.frame(in: .local).width * self.contentRatio / CGFloat(self.width) - self.spacing
+                                )
                             }
                         }
                     }
                 }
-                .offset(x: self.spacing / 2, y: 0)
             }
         }
     }

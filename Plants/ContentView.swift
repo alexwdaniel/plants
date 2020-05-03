@@ -16,13 +16,15 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             CollectionView(items: $viewModel.items) { plant in
-                PlantView(plant: plant).padding()
+                PlantView(plant: plant)
             }
-            .navigationBarTitle("My Plants")
+            .padding(.top, 16)
+            .padding([.leading, .trailing], 8)
+            .navigationBarTitle("My Plants", displayMode: .inline)
             .navigationBarItems(trailing: Button(action: {
                 self.showingAddScreen.toggle()
             }) {
-                Image(systemName: "plus")
+                Image(systemName: "plus").imageScale(.large)
             })
                 .sheet(isPresented: $showingAddScreen) {
                     AddPlantView().environment(\.managedObjectContext, self.moc)

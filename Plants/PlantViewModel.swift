@@ -31,7 +31,7 @@ class PlantViewModel: NSObject, NSFetchedResultsControllerDelegate, ObservableOb
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let request = Plant.createFetchRequest()
-        request.sortDescriptors = []
+        request.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: false)]
         self.fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
     
         super.init()

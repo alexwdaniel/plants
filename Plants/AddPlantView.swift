@@ -36,100 +36,104 @@ struct AddPlantView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                VStack(alignment: .leading, spacing: 20) {
-                    Text("Add a\nnew plant").font(.system(size: 36, weight: .bold, design: .rounded)).frame(alignment: .leading)
-                    if image != nil {
-                        image?.resizable().frame(width: 120, height: 160).cornerRadius(7)
-                    } else {
-                        Button(action: {
-                            self.showCaptureImageView.toggle()
-                        }) {
-                            Image(systemName: "photo").padding([.top, .bottom], 80).padding([.leading, .trailing], 60).overlay(
-                                RoundedRectangle(cornerRadius: 7)
-                                    .stroke(Color.gray, lineWidth: 1)
-                            )
-                            Text("Choose a photo")
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(alignment: .leading, spacing: 20) {
+                        Text("Add a\nnew plant").font(.system(size: 36, weight: .bold, design: .rounded)).frame(alignment: .leading)
+                        if image != nil {
+                            image?.resizable().frame(width: 120, height: 160).cornerRadius(7)
+                        } else {
+                            Button(action: {
+                                self.showCaptureImageView.toggle()
+                            }) {
+                                Image(systemName: "photo").padding([.top, .bottom], 80).padding([.leading, .trailing], 60).overlay(
+                                    RoundedRectangle(cornerRadius: 7)
+                                        .stroke(Color.gray, lineWidth: 1)
+                                )
+                                Text("Choose a photo")
+                            }
                         }
-                    }
-                    
-                    TextField("What is the plant's name?", text: $name).padding(15).overlay(
-                        RoundedRectangle(cornerRadius: 7)
-                            .stroke(Color.gray, lineWidth: 1)
-                    )
-                    TextField("How often does it like water?", text: $waterFrequency)
-                        .padding(15).overlay(
+                        
+                        TextField("What is the plant's name?", text: $name).padding(15).overlay(
                             RoundedRectangle(cornerRadius: 7)
                                 .stroke(Color.gray, lineWidth: 1)
-                    )
-                        .keyboardType(.numberPad)
-                        .onReceive(Just(waterFrequency)) { newValue in
-                            let filtered = newValue.filter { "0123456789".contains($0) }
-                            if filtered != newValue {
-                                self.waterFrequency = filtered
-                            }
-                    }
-                    
-                    Group {
-                        Toggle(isOn: $createReminder) {
-                            Text("Need a reminder?")
-                        }
-                        Button(action: {
-                            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
-                                if success {
-                                    print("All set!")
-                                } else if let error = error {
-                                    print(error.localizedDescription)
+                        )
+                        TextField("How often does it like water?", text: $waterFrequency)
+                            .padding(15).overlay(
+                                RoundedRectangle(cornerRadius: 7)
+                                    .stroke(Color.gray, lineWidth: 1)
+                        )
+                            .keyboardType(.numberPad)
+                            .onReceive(Just(waterFrequency)) { newValue in
+                                let filtered = newValue.filter { "0123456789".contains($0) }
+                                if filtered != newValue {
+                                    self.waterFrequency = filtered
                                 }
-                            }
-                        }) {
-                            Text("Give Permission")
                         }
-                    }
-                    
-                    
-                    TextField("Any other notes about it?", text: $notes).padding(15).overlay(
-                        RoundedRectangle(cornerRadius: 7)
-                            .stroke(Color.gray, lineWidth: 1)
-                    )
-                    
-                    Spacer()
-                    Button("Add") {
-                        let plant = Plant(context: self.moc)
-                        plant.name = self.name
-                        if let frequency = Int16(self.waterFrequency) {
-                            plant.waterFrequency = frequency
-                        }
-                        plant.notes = self.notes
-                        plant.createdAt = Date()
-                        plant.id = UUID()
                         
-                        if let image = self.uiImage {
-                            let imageSaver = ImageSaver()
-                            if let file = imageSaver.save(image: image) {
-                                plant.photo = file
+                        Group {
+                            Toggle(isOn: $createReminder) {
+                                Text("Need a reminder?")
+                            }
+                            Button(action: {
+                                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                                    if success {
+                                        print("All set!")
+                                    } else if let error = error {
+                                        print(error.localizedDescription)
+                                    }
+                                }
+                            }) {
+                                Text("Give Permission")
+                            }
+                        }
+                        
+                        
+                        TextField("Any other notes about it?", text: $notes).padding(15).overlay(
+                            RoundedRectangle(cornerRadius: 7)
+                                .stroke(Color.gray, lineWidth: 1)
+                        )
+                        
+                        Spacer()
+                        Button("Add") {
+                            let plant = Plant(context: self.moc)
+                            plant.name = self.name
+                            if let frequency = Int16(self.waterFrequency) {
+                                plant.waterFrequency = frequency
+                            }
+                            plant.notes = self.notes
+                            plant.createdAt = Date()
+                            plant.id = UUID()
+                            
+                            if let image = self.uiImage {
+                                let imageSaver = ImageSaver()
+                                if let file = imageSaver.save(image: image) {
+                                    plant.photo = file
+                                }
+                                
+                            }
+                            try? self.moc.save()
+                            
+                            if self.createReminder {
+                                Notifications.water(plant: plant)
                             }
                             
-                        }
-                        try? self.moc.save()
-                        
-                        if self.createReminder {
-                            Notifications.water(plant: plant)
-                        }
-                        
-                        self.presentationMode.wrappedValue.dismiss()
-                    }.buttonStyle(CustomButtonStyle())
-                }
-                
+                            self.presentationMode.wrappedValue.dismiss()
+                        }.buttonStyle(CustomButtonStyle())
+                    }.padding([.leading, .trailing], 20)
+                    
+                    
+                    
+                }.navigationBarItems(trailing: Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    Image(systemName: "xmark.circle")
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).foregroundColor(Color.black)
+                    }).adaptiveKeyboard()
                 
                 if (showCaptureImageView) {
                     CaptureImageView(isShown: $showCaptureImageView, image: $image, uiImage: $uiImage)
                 }
-            }.padding([.leading, .trailing], 20).navigationBarItems(trailing: Button(action: {
-                self.presentationMode.wrappedValue.dismiss()
-            }) {
-                Image(systemName: "xmark.circle")
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).foregroundColor(Color.black)
-            })
+            }
         }
     }
 }
