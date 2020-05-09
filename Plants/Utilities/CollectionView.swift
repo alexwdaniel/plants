@@ -26,7 +26,7 @@ extension Array: Identifiable where Element: Identifiable {
 struct CollectionView<Content: View>: View {
     @State var width = 2
     @State var spacing: CGFloat = 0
-    let contentRatio: CGFloat = 3 / 2
+    let contentRatio: CGFloat = 4 / 3
     
     @Binding var items: [Plant];
     let content: (Plant) -> Content
@@ -46,7 +46,7 @@ struct CollectionView<Content: View>: View {
                             }
                         }
                     }
-                }
+                }.offset(y: 8)
             }
         }
     }

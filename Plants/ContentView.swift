@@ -16,9 +16,10 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             CollectionView(items: $viewModel.items) { plant in
-                PlantView(plant: plant)
+                NavigationLink(destination: DetailView(plant: plant)) {
+                    PlantView(plant: plant)
+                }.buttonStyle(PlainButtonStyle())
             }
-            .padding(.top, 16)
             .padding([.leading, .trailing], 8)
             .navigationBarTitle("My Plants", displayMode: .inline)
             .navigationBarItems(trailing: Button(action: {

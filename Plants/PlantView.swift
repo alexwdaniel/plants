@@ -20,7 +20,7 @@ struct PlantView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: geo.size.width, height: geo.size.height)
-                        .cornerRadius(10)
+                        .cornerRadius(7)
                         .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 8)
                 } else {
                     Spacer()

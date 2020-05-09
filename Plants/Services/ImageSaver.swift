@@ -21,6 +21,24 @@ class ImageSaver: NSObject {
         return name        
     }
     
+    func delete(filename: String) {
+        let filePath = self.getDocumentsDirectory().appendingPathComponent(filename)        
+                
+        do {
+            let fileManager = FileManager()
+
+            if fileManager.fileExists(atPath: filePath.path) {
+                try fileManager.removeItem(atPath: filePath.path)
+            } else {
+                print("File does not exist")
+            }
+
+        }
+        catch let error as NSError {
+            print("An error took place: \(error)")
+        }
+    }
+    
     @objc func saveError(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         // handle error
     }
@@ -40,11 +58,11 @@ class ImageSaver: NSObject {
         return nil
     }
     
-    func fixOrientation(image: UIImage) -> UIImage? {
+    private func fixOrientation(image: UIImage) -> UIImage? {
         if image.imageOrientation == UIImage.Orientation.up {
             return image
         }
-
+        
         UIGraphicsBeginImageContext(image.size)
         image.draw(in: CGRect(origin: .zero, size: image.size))
         let normalizedImage = UIGraphicsGetImageFromCurrentImageContext()

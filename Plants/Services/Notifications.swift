@@ -28,4 +28,13 @@ struct Notifications {
 
         UNUserNotificationCenter.current().add(request)
     }
+    
+    static func cancelReminder(plant: Plant) {
+        guard let uuid = plant.id else {
+            return
+        }
+        
+        let id = "\(uuid.uuidString)-water-frequency"
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [id])
+    }
 }

@@ -25,6 +25,7 @@
 		FAC6B4FB2453432E009409C1 /* PlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6B4FA2453432E009409C1 /* PlantView.swift */; };
 		FAC6B4FD2454E458009409C1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6B4FC2454E458009409C1 /* Notifications.swift */; };
 		FAC8BD73245DD3B5009348AB /* AdaptiveKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8BD72245DD3B5009348AB /* AdaptiveKeyboard.swift */; };
+		FAEDB0E2245F36B900D26CF6 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDB0E1245F36B900D26CF6 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		FAC6B4FA2453432E009409C1 /* PlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantView.swift; sourceTree = "<group>"; };
 		FAC6B4FC2454E458009409C1 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		FAC8BD72245DD3B5009348AB /* AdaptiveKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveKeyboard.swift; sourceTree = "<group>"; };
+		FAEDB0E1245F36B900D26CF6 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +82,10 @@
 		FA3F56B8244CBCD000C9D4FC /* Plants */ = {
 			isa = PBXGroup;
 			children = (
-				FA3F56C0244CBCD000C9D4FC /* ContentView.swift */,
-				FAB65044244D193E00E1AFEE /* CollectionView.swift */,
-				FAC6B4FA2453432E009409C1 /* PlantView.swift */,
 				FAB6503C244CC4DC00E1AFEE /* AddPlantView.swift */,
+				FA3F56C0244CBCD000C9D4FC /* ContentView.swift */,
+				FAEDB0E1245F36B900D26CF6 /* DetailView.swift */,
+				FAC6B4FA2453432E009409C1 /* PlantView.swift */,
 				FAEDB0DF245F334B00D26CF6 /* Model */,
 				FAEDB0DD245F30B100D26CF6 /* SupportFiles */,
 				FAEDB0E0245F338B00D26CF6 /* Services */,
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC8BD72245DD3B5009348AB /* AdaptiveKeyboard.swift */,
+				FAB65044244D193E00E1AFEE /* CollectionView.swift */,
 				FAB6503E244CCF8200E1AFEE /* Coordinator.swift */,
 				FAB65042244CD14400E1AFEE /* CaptureImageView.swift */,
 			);
@@ -223,6 +226,7 @@
 				FAB65041244CCFB600E1AFEE /* ImageSaver.swift in Sources */,
 				FAB6504E244D36E300E1AFEE /* Plant+CoreDataClass.swift in Sources */,
 				FAC8BD73245DD3B5009348AB /* AdaptiveKeyboard.swift in Sources */,
+				FAEDB0E2245F36B900D26CF6 /* DetailView.swift in Sources */,
 				FAC6B4FD2454E458009409C1 /* Notifications.swift in Sources */,
 				FA3F56C1244CBCD000C9D4FC /* ContentView.swift in Sources */,
 				FAC6B4FB2453432E009409C1 /* PlantView.swift in Sources */,
