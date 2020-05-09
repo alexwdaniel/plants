@@ -13,6 +13,18 @@ struct ContentView: View {
     @ObservedObject var viewModel = PlantViewModel()
     @State private var showingAddScreen = false
     
+    init() {        
+        let appearance = UINavigationBarAppearance()
+                
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .white
+        appearance.shadowColor = .clear
+        
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().tintColor = .black
+    }
+    
     var body: some View {
         NavigationView {
             CollectionView(items: $viewModel.items) { plant in
@@ -25,7 +37,7 @@ struct ContentView: View {
             .navigationBarItems(trailing: Button(action: {
                 self.showingAddScreen.toggle()
             }) {
-                Image(systemName: "plus").imageScale(.large)
+                Image(uiImage: UIImage(systemName: "plus", withConfiguration: UIImage.SymbolConfiguration(weight: .semibold))!)
             })
                 .sheet(isPresented: $showingAddScreen) {
                     AddPlantView().environment(\.managedObjectContext, self.moc)
