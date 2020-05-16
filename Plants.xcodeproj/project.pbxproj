@@ -14,14 +14,16 @@
 		FA3F56C3244CBCD500C9D4FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3F56C2244CBCD500C9D4FC /* Assets.xcassets */; };
 		FA3F56C6244CBCD500C9D4FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3F56C5244CBCD500C9D4FC /* Preview Assets.xcassets */; };
 		FA3F56C9244CBCD500C9D4FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3F56C7244CBCD500C9D4FC /* LaunchScreen.storyboard */; };
+		FAAE110224705453003DD715 /* Plant+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE10FE24705453003DD715 /* Plant+CoreDataClass.swift */; };
+		FAAE110324705453003DD715 /* Plant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE10FF24705453003DD715 /* Plant+CoreDataProperties.swift */; };
+		FAAE110424705453003DD715 /* Watering+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE110024705453003DD715 /* Watering+CoreDataClass.swift */; };
+		FAAE110524705453003DD715 /* Watering+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE110124705453003DD715 /* Watering+CoreDataProperties.swift */; };
 		FAB6503D244CC4DC00E1AFEE /* AddPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6503C244CC4DC00E1AFEE /* AddPlantView.swift */; };
 		FAB6503F244CCF8200E1AFEE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6503E244CCF8200E1AFEE /* Coordinator.swift */; };
 		FAB65041244CCFB600E1AFEE /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB65040244CCFB600E1AFEE /* ImageSaver.swift */; };
 		FAB65043244CD14400E1AFEE /* CaptureImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB65042244CD14400E1AFEE /* CaptureImageView.swift */; };
 		FAB65045244D193E00E1AFEE /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB65044244D193E00E1AFEE /* CollectionView.swift */; };
 		FAB65047244D1FD200E1AFEE /* PlantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB65046244D1FD200E1AFEE /* PlantViewModel.swift */; };
-		FAB6504E244D36E300E1AFEE /* Plant+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6504C244D36E300E1AFEE /* Plant+CoreDataClass.swift */; };
-		FAB6504F244D36E300E1AFEE /* Plant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6504D244D36E300E1AFEE /* Plant+CoreDataProperties.swift */; };
 		FAC6B4FB2453432E009409C1 /* PlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6B4FA2453432E009409C1 /* PlantView.swift */; };
 		FAC6B4FD2454E458009409C1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6B4FC2454E458009409C1 /* Notifications.swift */; };
 		FAC8BD73245DD3B5009348AB /* AdaptiveKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8BD72245DD3B5009348AB /* AdaptiveKeyboard.swift */; };
@@ -38,14 +40,16 @@
 		FA3F56C5244CBCD500C9D4FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA3F56C8244CBCD500C9D4FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA3F56CA244CBCD500C9D4FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Plants/SupportFiles/Info.plist; sourceTree = SOURCE_ROOT; };
+		FAAE10FE24705453003DD715 /* Plant+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plant+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FAAE10FF24705453003DD715 /* Plant+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plant+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FAAE110024705453003DD715 /* Watering+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Watering+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FAAE110124705453003DD715 /* Watering+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Watering+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FAB6503C244CC4DC00E1AFEE /* AddPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantView.swift; sourceTree = "<group>"; };
 		FAB6503E244CCF8200E1AFEE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FAB65040244CCFB600E1AFEE /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		FAB65042244CD14400E1AFEE /* CaptureImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureImageView.swift; sourceTree = "<group>"; };
 		FAB65044244D193E00E1AFEE /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		FAB65046244D1FD200E1AFEE /* PlantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantViewModel.swift; sourceTree = "<group>"; };
-		FAB6504C244D36E300E1AFEE /* Plant+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plant+CoreDataClass.swift"; sourceTree = "<group>"; };
-		FAB6504D244D36E300E1AFEE /* Plant+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plant+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FAC6B4FA2453432E009409C1 /* PlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantView.swift; sourceTree = "<group>"; };
 		FAC6B4FC2454E458009409C1 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		FAC8BD72245DD3B5009348AB /* AdaptiveKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveKeyboard.swift; sourceTree = "<group>"; };
@@ -129,10 +133,12 @@
 		FAEDB0DF245F334B00D26CF6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FAAE10FE24705453003DD715 /* Plant+CoreDataClass.swift */,
+				FAAE10FF24705453003DD715 /* Plant+CoreDataProperties.swift */,
+				FAAE110024705453003DD715 /* Watering+CoreDataClass.swift */,
+				FAAE110124705453003DD715 /* Watering+CoreDataProperties.swift */,
 				FAB65046244D1FD200E1AFEE /* PlantViewModel.swift */,
 				FA3F56BD244CBCD000C9D4FC /* Plants.xcdatamodeld */,
-				FAB6504D244D36E300E1AFEE /* Plant+CoreDataProperties.swift */,
-				FAB6504C244D36E300E1AFEE /* Plant+CoreDataClass.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,19 +226,21 @@
 				FAB65045244D193E00E1AFEE /* CollectionView.swift in Sources */,
 				FA3F56BA244CBCD000C9D4FC /* AppDelegate.swift in Sources */,
 				FA3F56BF244CBCD000C9D4FC /* Plants.xcdatamodeld in Sources */,
-				FAB6504F244D36E300E1AFEE /* Plant+CoreDataProperties.swift in Sources */,
+				FAAE110324705453003DD715 /* Plant+CoreDataProperties.swift in Sources */,
 				FAB6503F244CCF8200E1AFEE /* Coordinator.swift in Sources */,
 				FAB65043244CD14400E1AFEE /* CaptureImageView.swift in Sources */,
 				FAB65041244CCFB600E1AFEE /* ImageSaver.swift in Sources */,
-				FAB6504E244D36E300E1AFEE /* Plant+CoreDataClass.swift in Sources */,
 				FAC8BD73245DD3B5009348AB /* AdaptiveKeyboard.swift in Sources */,
 				FAEDB0E2245F36B900D26CF6 /* DetailView.swift in Sources */,
 				FAC6B4FD2454E458009409C1 /* Notifications.swift in Sources */,
 				FA3F56C1244CBCD000C9D4FC /* ContentView.swift in Sources */,
 				FAC6B4FB2453432E009409C1 /* PlantView.swift in Sources */,
+				FAAE110524705453003DD715 /* Watering+CoreDataProperties.swift in Sources */,
 				FA3F56BC244CBCD000C9D4FC /* SceneDelegate.swift in Sources */,
 				FAB65047244D1FD200E1AFEE /* PlantViewModel.swift in Sources */,
+				FAAE110224705453003DD715 /* Plant+CoreDataClass.swift in Sources */,
 				FAB6503D244CC4DC00E1AFEE /* AddPlantView.swift in Sources */,
+				FAAE110424705453003DD715 /* Watering+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

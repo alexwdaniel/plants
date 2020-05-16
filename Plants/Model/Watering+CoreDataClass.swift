@@ -1,5 +1,5 @@
 //
-//  Plant+CoreDataClass.swift
+//  Watering+CoreDataClass.swift
 //  Plants
 //
 //  Created by Alexander Daniel on 5/16/20.
@@ -9,9 +9,8 @@
 
 import Foundation
 import CoreData
-import UIKit
 
-@objc(Plant)
-public class Plant: NSManagedObject {
-    var uiImage: UIImage?
+@objc(Watering)
+public class Watering: NSManagedObject {
+
 }
