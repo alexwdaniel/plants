@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA20CB402471A3F500F25E91 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20CB3F2471A3F500F25E91 /* BottomSheet.swift */; };
 		FA3F56BA244CBCD000C9D4FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F56B9244CBCD000C9D4FC /* AppDelegate.swift */; };
 		FA3F56BC244CBCD000C9D4FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F56BB244CBCD000C9D4FC /* SceneDelegate.swift */; };
 		FA3F56BF244CBCD000C9D4FC /* Plants.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA3F56BD244CBCD000C9D4FC /* Plants.xcdatamodeld */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA20CB3F2471A3F500F25E91 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		FA3F56B6244CBCD000C9D4FC /* Plants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3F56B9244CBCD000C9D4FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA3F56BB244CBCD000C9D4FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC8BD72245DD3B5009348AB /* AdaptiveKeyboard.swift */,
+				FA20CB3F2471A3F500F25E91 /* BottomSheet.swift */,
 				FAB65044244D193E00E1AFEE /* CollectionView.swift */,
 				FAB6503E244CCF8200E1AFEE /* Coordinator.swift */,
 				FAB65042244CD14400E1AFEE /* CaptureImageView.swift */,
@@ -236,6 +239,7 @@
 				FA3F56C1244CBCD000C9D4FC /* ContentView.swift in Sources */,
 				FAC6B4FB2453432E009409C1 /* PlantView.swift in Sources */,
 				FAAE110524705453003DD715 /* Watering+CoreDataProperties.swift in Sources */,
+				FA20CB402471A3F500F25E91 /* BottomSheet.swift in Sources */,
 				FA3F56BC244CBCD000C9D4FC /* SceneDelegate.swift in Sources */,
 				FAB65047244D1FD200E1AFEE /* PlantViewModel.swift in Sources */,
 				FAAE110224705453003DD715 /* Plant+CoreDataClass.swift in Sources */,
