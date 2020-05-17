@@ -41,7 +41,7 @@ class PlantViewModel: NSObject, NSFetchedResultsControllerDelegate, ObservableOb
             return plants.map { plant in
                 if let photo = plant.photo, let image = hash[photo] {
                     plant.uiImage = image
-                }
+                }                
                 return plant
             }
         }.assign(to: \.items, on: self)

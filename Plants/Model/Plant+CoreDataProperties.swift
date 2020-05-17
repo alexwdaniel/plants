@@ -24,6 +24,14 @@ extension Plant {
     @NSManaged public var photo: String?
     @NSManaged public var waterFrequency: Int16
     @NSManaged public var waterings: NSOrderedSet?
+    
+    public var wateringsList: [Watering] {
+        return waterings?.array as? [Watering] ?? []
+    }
+    
+    public var latestWatering: Watering? {
+        return wateringsList.last
+    }
 
 }
 

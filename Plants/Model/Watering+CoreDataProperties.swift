@@ -13,7 +13,7 @@ import CoreData
 
 extension Watering {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Watering> {
+    @nonobjc public class func createFetchRequest() -> NSFetchRequest<Watering> {
         return NSFetchRequest<Watering>(entityName: "Watering")
     }
 
