@@ -66,6 +66,9 @@ struct DetailSheetView: View {
                 Notifications.water(plant: self.plant)
                 
                 try? self.moc.save()
+                
+                let generator = UINotificationFeedbackGenerator()
+                generator.notificationOccurred(.success)
             }) {
                 Text("WATER").textStyle(ButtonTextStyle()).frame(maxWidth: .infinity, alignment: .center)
             }
